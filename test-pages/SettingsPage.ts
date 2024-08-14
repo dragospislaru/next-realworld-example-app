@@ -31,25 +31,24 @@ export class LoginPage {
     await this.updateBtn.click();
   }
 
-  async changeName() {
-    await this.name.fill(process.env.UPDATE_NAME);
-    expect(this.name).toHaveValue(process.env.UPDATE_NAME);
+  async changeName(newName: string) {
+    await this.name.fill(newName);
+    expect(this.name).toHaveValue(newName);
   }
 
-  async changeBio() {
-    const randomNumber = Math.floor(Math.random() * 5);
-    await this.bio.fill(`Random text ${randomNumber}`);
-    expect(this.bio).toHaveValue(`Random text ${randomNumber}`);
+  async changeBio(newBio: string) {
+    await this.bio.fill(`Random text ${newBio}`);
+    expect(this.bio).toHaveValue(`Random text ${newBio}`);
   }
 
-  async changeEmail() {
-    await this.email.fill(process.env.UPDATE_EMAIL);
-    expect(this.email).toHaveValue(process.env.UPDATE_EMAIL);
+  async changeEmail(newEmail: string) {
+    await this.email.fill(newEmail);
+    expect(this.email).toHaveValue(newEmail);
   }
 
-  async changePassword() {
-    await this.password.fill(process.env.UPDATE_PASSWORD);
-    expect(this.password).toHaveValue(process.env.UPDATE_PASSWORD);
+  async changePassword(newPassword: string) {
+    await this.password.fill(newPassword);
+    expect(this.password).toHaveValue(newPassword);
   }
 
   async clickLogutBtn() {
