@@ -19,23 +19,23 @@ export class NewArticlePage {
   }
 
   async fillArticleTitle(title: string) {
-    this.articleTitle.fill(title);
+    await this.articleTitle.fill(title);
   }
 
   async fillArticleDescription(description: string) {
-    this.articleDescription.fill(description);
+    await this.articleDescription.fill(description);
   }
 
   async fillArticleBody(text: string) {
-    this.articleBody.fill(text);
+    await this.articleBody.fill(text);
   }
 
   async fillArticleTags(tag: string) {
-    this.articleTags.fill(tag);
+    await this.articleTags.fill(tag);
     await this.page.keyboard.press('Enter');
   }
 
   async publicArticle() {
-    this.publicBtn.click();
+    await this.publicBtn.click();
   }
 }
